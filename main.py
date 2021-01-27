@@ -1,8 +1,10 @@
 import sys
 from jd_spider_requests import JdSeckill
-
+import multiprocessing
 
 if __name__ == '__main__':
+    multiprocessing.freeze_support()
+
     a = """
 
        oooo oooooooooo.            .oooooo..o                     oooo         o8o  oooo  oooo  
@@ -24,6 +26,7 @@ if __name__ == '__main__':
     choice_function = input('请选择:')
     if choice_function == '1':
         jd_seckill.reserve()
+        input('退出')
     elif choice_function == '2':
         jd_seckill.seckill_by_proc_pool()
     else:

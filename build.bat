@@ -1,0 +1,1 @@
+pyinstaller -i jd_killer.ico -F main.py -y
